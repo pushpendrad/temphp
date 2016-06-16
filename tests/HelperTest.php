@@ -29,6 +29,27 @@ class HelperTest extends PHPUnit_Framework_TestCase
                         $this->assertEquals(false,$this->helper->update("a","b","c"));
 		}
 		
+		public function test__construct()
+		{
+			$this->helper=new Helper("ecomm");
+                        //$this->asser('172.27.59.54', true);
+                        $this->assertEquals(false,$this->helper->__construct());
+		}
+		
+		public function testread_record()
+		{
+			$this->helper=new Helper("ecomm");
+                        //$this->asser('172.27.59.54', true);
+                        $this->assertEquals(false,$this->helper->read_record("a","b","c"));
+		}
+		public function testread_all()
+		{
+			$this->helper=new Helper("ecomm");
+                        //$this->asser('172.27.59.54', true);
+                        $this->assertEquals(false,$this->helper->read_all("a","b"));
+		}
+		
+		
 		public function testdelete()
 		{
 			$this->helper=new Helper("ecomm");
