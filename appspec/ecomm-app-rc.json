@@ -1,0 +1,39 @@
+{
+  "kind": "ReplicationController",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "ecomm-app-rc",
+    "labels": {
+      "name": "ecomm-app"
+    }
+  },
+  "spec": {
+    "replicas": 2,
+    "selector": {
+      "name": "ecomm-app"
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "name": "ecomm-app"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "ecomm-app-con",
+            "image": "ecomm-app-img",
+            "ports": [
+              {
+                "containerPort": 80,
+                "protocol": "TCP"
+              }
+            ],
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+      }
+    }
+  }
+}
