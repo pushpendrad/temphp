@@ -1,4 +1,9 @@
 
+#
+# Ubuntu Dockerfile
+#
+# https://github.com/dockerfile/ubunt
+
 # Pull base image.
 FROM ubuntu:14.04
 
