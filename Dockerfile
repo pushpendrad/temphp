@@ -1,7 +1,9 @@
+
 #
 # Ubuntu Dockerfile
 #
-# https://github.com/dockerfile/ubuntu
+# https://github.com/dockerfile/ubunt
+
 # Pull base image.
 FROM ubuntu:14.04
 
@@ -16,6 +18,5 @@ RUN rm -f /etc/apache2/mods-available/dir.conf
 COPY dir.conf /etc/apache2/mods-available/
 
 EXPOSE 80
-
 #CMD service apache2 start
 CMD /usr/sbin/apache2ctl -D FOREGROUND
