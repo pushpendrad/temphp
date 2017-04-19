@@ -19,5 +19,9 @@ COPY dir.conf /etc/apache2/mods-available/
 
 EXPOSE 80
 
+
+
+
+
 #CMD service apache2 start
 CMD /usr/sbin/apache2ctl -D FOREGROUND
